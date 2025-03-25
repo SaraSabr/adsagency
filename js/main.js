@@ -46,3 +46,38 @@ function toggleDropdown(event) {
     let dropdownMenu = event.target.nextElementSibling; 
     dropdownMenu.classList.toggle("show");
 }
+// تشغيل الكود بعد تحميل الصفحة بالكامل
+window.onload = function () {
+    // إخفاء النافذة عند تحميل الصفحة (تأكد أنها مغلقة في البداية)
+    document.getElementById("modal").style.display = "none";
+
+    // تحديد جميع الصور داخل المشاريع
+    const images = document.querySelectorAll(".project-img");
+
+    images.forEach(img => {
+        img.addEventListener("click", function () {
+            const imageSrc = this.getAttribute("data-src");
+            const title = this.getAttribute("data-title");
+            const description = this.getAttribute("data-desc");
+            const link = this.getAttribute("data-link");
+
+            document.getElementById("modal-img").src = imageSrc;
+            document.getElementById("modal-title").innerText = title;
+            document.getElementById("modal-desc").innerText = description;
+            document.getElementById("modal-link").href = link;
+            document.getElementById("modal").style.display = "flex";
+        });
+    });
+
+    // إغلاق النافذة عند النقر خارجها
+    document.getElementById("modal").addEventListener("click", function (e) {
+        if (e.target === this) {
+            closeModal();
+        }
+    });
+}
+
+// دالة إغلاق النافذة
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
