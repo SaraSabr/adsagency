@@ -216,4 +216,112 @@ margin-bottom: 20px;
 
 
 /*  */
+/* تنسيق عام */
+.portfolio {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f8f8f8;
+}
+.portfolio h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
 
+/* تصميم الشبكة */
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.project {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.project:hover {
+    transform: scale(1.05);
+}
+.project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.project h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* تصميم النافذة المنبثقة */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    position: relative;
+}
+.modal img {
+    width: 100%;
+    border-radius: 10px;
+}
+.modal h2 {
+    margin: 10px 0;
+    color: #333;
+}
+.modal p {
+    color: #666;
+}
+.modal a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.button-1 {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    background-color:#0011ff ;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+    cursor: pointer;
+    margin: 5px auto;
+  }
